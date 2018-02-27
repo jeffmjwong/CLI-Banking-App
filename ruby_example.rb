@@ -1,4 +1,12 @@
 
+def ask_question(question, input_data_type: Integer)
+  print question + " "
+  user_input = gets.chomp
+  while user_input.class != input_data_type
+    puts "Invalid input. Please try again."
+  end
+end
+
 if (File.exist? "bank_balance.txt") == true
   money_balance = (IO.read "bank_balance.txt").to_i
 else
